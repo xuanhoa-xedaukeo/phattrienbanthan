@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XUÂN HÒA - Đánh Thức Con Người Phi Thường Trong Bạn</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styling & Glassmorphism */
+        body {
+            background-color: #090d16;
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow Backgrounds */
+        .ambient-glow-gold {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .ambient-glow-purple {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card-gold {
+            background: rgba(30, 27, 75, 0.5);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2);
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-fire {
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 50%, #ef4444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-gold-pulse {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+            animation: pulse-glow 2.5s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); transform: scale(1); }
+            50% { box-shadow: 0 0 35px rgba(245, 158, 11, 0.8); transform: scale(1.02); }
+        }
+
+        .pulse-shake {
+            animation: pulse-shake-anim 2s infinite;
+        }
+
+        @keyframes pulse-shake-anim {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            10%, 30% { transform: scale(1.1) rotate(-6deg); }
+            20%, 40% { transform: scale(1.1) rotate(6deg); }
+            50% { transform: scale(1); }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #090d16; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+    </style>
+</head>
+<body class="relative">
+
+    <!-- Ambient Glowing Orbs -->
+    <div class="ambient-glow-gold top-0 left-1/4 -translate-x-1/2"></div>
+    <div class="ambient-glow-purple top-1/3 right-0"></div>
+    <div class="ambient-glow-gold bottom-1/4 left-0"></div>
+
+    <!-- 🌟 TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-600 text-slate-950 font-black text-xs sm:text-sm py-2 px-4 text-center tracking-wider uppercase shadow-lg">
+        🔥 KỶ LUẬT 4H30 SÁNG • TẬP LUYỆN MARATHON • KHAI PHÁ TIỀM NĂNG VÔ HẠN • ZALO/HOTLINE: 0978.244.969
+    </div>
+
+    <!-- 🚀 HEADER NAVIGATION -->
+    <header class="sticky top-0 z-40 glass-card border-b border-slate-800/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 via-orange-500 to-yellow-300 flex items-center justify-center text-slate-950 font-black text-2xl shadow-lg shadow-amber-500/30 group-hover:rotate-6 transition duration-300">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl text-white tracking-tight leading-tight">
+                        XUÂN HÒA <span class="text-amber-400 font-light">| Phát Triển Bản Thân</span>
+                    </h1>
+                    <p class="text-[10px] font-bold text-amber-500 uppercase tracking-widest">Đánh Thức Con Người Phi Thường</p>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                <a href="#tru-cot" class="text-slate-300 hover:text-amber-400 transition">Trụ Cột Bứt Phá</a>
+                <a href="#thuoc-do" class="text-slate-300 hover:text-amber-400 transition">Thước Đo Năng Lượng</a>
+                <a href="#tuyen-ngon" class="text-slate-300 hover:text-amber-400 transition">Tuyên Ngôn Chiến Binh</a>
+                <a href="#ve-xuan-hoa" class="text-slate-300 hover:text-amber-400 transition">Về Xuân Hòa</a>
+            </nav>
+
+            <!-- Quick Action Button -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="https://zalo.me/0978244969" target="_blank" class="px-5 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 font-extrabold text-xs tracking-wider uppercase transition flex items-center space-x-2">
+                    <i class="fa-solid fa-comments text-amber-400"></i>
+                    <span>Zalo: 0978 244 969</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden text-slate-300 hover:text-amber-400 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars-staggered" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden md:hidden glass-card border-b border-slate-800 px-6 py-6 space-y-4">
+            <a href="#tru-cot" onclick="toggleMobileMenu()" class="block font-semibold text-slate-200 hover:text-amber-400">Trụ Cột Bứt Phá</a>
+            <a href="#thuoc-do" onclick="toggleMobileMenu()" class="block font-semibold text-slate-200 hover:text-amber-400">Thước Đo Năng Lượng</a>
+            <a href="#tuyen-ngon" onclick="toggleMobileMenu()" class="block font-semibold text-slate-200 hover:text-amber-400">Tuyên Ngôn Chiến Binh</a>
+            <a href="#ve-xuan-hoa" onclick="toggleMobileMenu()" class="block font-semibold text-slate-200 hover:text-amber-400">Về Xuân Hòa</a>
+            <a href="https://zalo.me/0978244969" target="_blank" class="block text-center py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-extrabold rounded-xl">
+                KẾT NỐI ZALO: 0978.244.969
+            </a>
+        </div>
+    </header>
+
+    <!-- ⚡ HERO BANNER SECTION -->
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content Column -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    
+                    <!-- High Energy Badge -->
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-black uppercase tracking-widest shadow-inner">
+                        <i class="fa-solid fa-bolt text-amber-400 animate-pulse"></i>
+                        <span>Khai Phá Tiềm Năng Vô Hạn Trong Chính Bạn</span>
+                    </div>
+
+                    <!-- Main Hero Headline -->
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none text-white">
+                        ĐÁNH THỨC CON NGƯỜI <br class="hidden sm:inline">
+                        <span class="text-gradient-fire uppercase">PHI THƯỜNG</span> <br>
+                        TRONG BẠN!
+                    </h1>
+
+                    <!-- Motivational Subtitle -->
+                    <p class="text-slate-300 text-base sm:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Hành trình rèn luyện ý chí thép cùng <strong class="text-amber-400 font-bold">XUÂN HÒA</strong>. Kỷ luật chinh phục bình minh lúc <span class="text-white font-bold underline decoration-amber-500">4h30 sáng</span>, tập luyện <span class="text-white font-bold">Suối Nguồn Tươi Trẻ</span>, chạy bộ vượt rào cản tâm lý & thấu hiểu <span class="text-amber-400 font-bold">Tử Huyệt Cảm Xúc</span>.
+                    </p>
+
+                    <!-- CTAs & Contact Quick Bar -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://zalo.me/0978244969" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-2xl btn-gold-pulse text-slate-950 font-black text-base uppercase tracking-wider flex items-center justify-center space-x-3 transition transform active:scale-95">
+                            <i class="fa-solid fa-comments text-xl"></i>
+                            <span>Tham Gia Nhóm Zalo Rèn Luyện</span>
+                        </a>
+
+                        <a href="tel:0978244969" class="w-full sm:w-auto px-8 py-4 rounded-2xl glass-card hover:bg-white/10 text-white font-bold text-base border border-slate-700 flex items-center justify-center space-x-3 transition">
+                            <i class="fa-solid fa-phone-volume text-amber-400 text-xl"></i>
+                            <span>Gọi Hotline: 0978.244.969</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Metrics Footer -->
+                    <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-amber-400">4:30 AM</div>
+                            <div class="text-xs text-slate-400 font-semibold uppercase mt-1">Bình Minh Kỷ Luật</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-amber-400">100%</div>
+                            <div class="text-xs text-slate-400 font-semibold uppercase mt-1">Năng Lượng Đỉnh Cao</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-amber-400">42 KM+</div>
+                            <div class="text-xs text-slate-400 font-semibold uppercase mt-1">Marathon Ý Chí</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Visual Glass Card Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
+                    
+                    <div class="relative glass-card-gold p-6 sm:p-8 rounded-3xl space-y-6">
+                        
+                        <!-- Top Card Badge -->
+                        <div class="flex items-center justify-between border-b border-amber-500/20 pb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold">
+                                    XH
+                                </div>
+                                <div>
+                                    <h4 class="font-extrabold text-sm text-white">XUÂN HÒA</h4>
+                                    <p class="text-[11px] text-amber-400 font-semibold">Nhà Khai Phá Năng Lượng</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">
+                                <i class="fa-solid fa-circle text-[8px] mr-1 animate-ping"></i> Sẵn Sàng Đồng Hành
+                            </span>
+                        </div>
+
+                        <!-- Quote Display -->
+                        <blockquote class="text-slate-200 italic font-medium text-sm leading-relaxed border-l-2 border-amber-400 pl-4 py-1">
+                            "Con người phi thường không sinh ra từ sự êm đềm. Họ được tôi luyện qua kỷ luật mỗi sáng 4h30, những dặm đường chạy bộ mồ hôi rơi và sự kiên định không bao giờ bỏ cuộc!"
+                        </blockquote>
+
+                        <!-- High Energy Key Takeaways Checklist -->
+                        <div class="space-y-3 pt-2 text-xs font-bold text-slate-300">
+                            <div class="flex items-center space-x-3 bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                                <i class="fa-solid fa-sun text-amber-400 text-base"></i>
+                                <span>Thức Giấc 4h30 - Đón Dòng Năng Lượng Vũ Trụ</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                                <i class="fa-solid fa-person-running text-amber-500 text-base"></i>
+                                <span>Suối Nguồn Tươi Trẻ & Chạy Bộ Vượt Giới Hạn</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                                <i class="fa-solid fa-brain text-amber-400 text-base"></i>
+                                <span>Làm Chủ Tử Huyệt Cảm Xúc & Tư Duy Làm Chủ</span>
+                            </div>
+                        </div>
+
+                        <!-- Direct Call Out Box -->
+                        <div class="bg-gradient-to-r from-amber-500/20 to-orange-500/20 p-4 rounded-2xl border border-amber-500/30 text-center">
+                            <p class="text-xs text-amber-300 font-bold uppercase mb-1">Tư Vấn & Trực Tiếp Trao Đổi</p>
+                            <a href="tel:0978244969" class="text-xl font-black text-amber-400 hover:underline tracking-widest block">
+                                📞 0978.244.969
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 🏆 CORE PILLARS OF GROWTH SECTION -->
+    <section id="tru-cot" class="py-24 relative bg-slate-950/80 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Title Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-black uppercase tracking-widest border border-amber-500/20">
+                    Bản Đồ Rèn Luyện Vượt Trội
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+                    3 TRỤ CỘT <span class="text-gradient-gold uppercase">KHAI PHÁ TIỀM NĂNG</span>
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Phương pháp thực chiến giúp bạn đập tan sự trì hoãn, làm chủ thân tâm trí và vươn tới đỉnh cao cuộc sống.
+                </p>
+            </div>
+
+            <!-- Pillars Grid (3 Cards) -->
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1: 4h30 Morning & Fountain of Youth -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-amber-500/50 transition duration-500 flex flex-col justify-between group">
+                    <div class="space-y-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-400 text-slate-950 flex items-center justify-center text-3xl font-black shadow-lg shadow-amber-500/20 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-white group-hover:text-amber-400 transition">
+                            1. Kỷ Luật 4h30 Sáng & Suối Nguồn Tươi Trẻ
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Bình minh là thời điểm vàng để tích tụ năng lượng thuần khiết. Thực hành 5 bài tập **Suối Nguồn Tươi Trẻ** cổ xưa giúp trẻ hóa tế bào, kích hoạt luân xa và tái tạo sức sống dồi dào cho cả ngày dài.
+                        </p>
+                        <ul class="space-y-2 text-xs font-bold text-slate-300">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-amber-400"></i>
+                                <span>Thức giấc trước 99% thế giới ngoài kia</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-amber-400"></i>
+                                <span>Tập luyện 5 thức Suối Nguồn Tươi Trẻ</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-amber-400"></i>
+                                <span>Thanh lọc tâm trí & thiết lập mục tiêu ngày</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80">
+                        <a href="https://zalo.me/0978244969" target="_blank" class="text-amber-400 font-extrabold text-xs uppercase tracking-wider flex items-center space-x-2 hover:translate-x-2 transition">
+                            <span>Tham Gia Đội Nhóm 4h30 AM</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Running & Marathon Mental Toughness -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-orange-500/50 transition duration-500 flex flex-col justify-between group">
+                    <div class="space-y-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-orange-500 to-red-500 text-white flex items-center justify-center text-3xl font-black shadow-lg shadow-orange-500/20 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-person-running"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-white group-hover:text-orange-400 transition">
+                            2. Chạy Bộ Vượt Giới Hạn Bản Thân
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Chạy bộ không đơn thuần là thể thao, đó là cuộc đấu trí với tiếng nói nhỏ yếu đuối bên trong. Từng bước chân dậm xuống mặt đường là từng lần đập tan rào cản sợ hãi để rèn luyện **Ý Chí Thép**.
+                        </p>
+                        <ul class="space-y-2 text-xs font-bold text-slate-300">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-orange-400"></i>
+                                <span>Chinh phục các cự ly 5km - 10km - 21km - 42km</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-orange-400"></i>
+                                <span>Rèn luyện tính kiên trì & sức bền vô hạn</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-orange-400"></i>
+                                <span>Giải phóng Hormone hạnh phúc Endorphin</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80">
+                        <a href="https://zalo.me/0978244969" target="_blank" class="text-orange-400 font-extrabold text-xs uppercase tracking-wider flex items-center space-x-2 hover:translate-x-2 transition">
+                            <span>Nhận Giáo Trình Chạy Bộ</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Potential & Emotional Triggers -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-emerald-500/50 transition duration-500 flex flex-col justify-between group">
+                    <div class="space-y-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-slate-950 flex items-center justify-center text-3xl font-black shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-white group-hover:text-emerald-400 transition">
+                            3. Khai Phá Tiềm Năng & Tử Huyệt Cảm Xúc
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Thấu hiểu bản thân thông qua tâm lý học và 6 tử huyệt cảm xúc cốt lõi. Học cách quản trị cảm xúc, chuyển hóa nỗi sợ thành động lực và làm chủ cuộc đời bằng tư duy tích cực đỉnh cao.
+                        </p>
+                        <ul class="space-y-2 text-xs font-bold text-slate-300">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span>Giải mã 6 Tử Huyệt Cảm Xúc con người</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span>Bứt phá giới hạn tư duy cũ kỹ</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span>Xây dựng lòng tự tin & bản lĩnh lãnh đạo</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80">
+                        <a href="https://zalo.me/0978244969" target="_blank" class="text-emerald-400 font-extrabold text-xs uppercase tracking-wider flex items-center space-x-2 hover:translate-x-2 transition">
+                            <span>Khai Mở Tâm Trí Ngay</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 📊 INTERACTIVE ENERGY CALCULATOR & HABIT CHECKLIST TOOL -->
+    <section id="thuoc-do" class="py-24 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="glass-card-gold p-8 sm:p-12 rounded-3xl space-y-8">
+                
+                <div class="text-center space-y-3">
+                    <span class="px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-400 text-xs font-black uppercase tracking-widest border border-amber-500/30">
+                        <i class="fa-solid fa-gauge-high mr-1"></i> Tương Tác Trực Tiếp
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white">
+                        THƯỚC ĐO NĂNG LƯỢNG & KỶ LUẬT NGÀY
+                    </h2>
+                    <p class="text-slate-300 text-sm max-w-xl mx-auto">
+                        Tích chọn những thói quen bạn đã hoàn thành hôm nay để đo lường cấp độ **Con Người Phi Thường** trong bạn!
+                    </p>
+                </div>
+
+                <!-- Interactive Checklist -->
+                <div class="grid sm:grid-cols-2 gap-4 text-sm font-semibold">
+                    
+                    <label class="flex items-center space-x-3 p-4 rounded-2xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-amber-500/50 transition">
+                        <input type="checkbox" onchange="calculateEnergy()" class="habit-check w-5 h-5 accent-amber-500 rounded" value="20">
+                        <span class="text-slate-200">🌅 Thức giấc lúc 4h30 sáng (+20 Đ)</span>
+                    </label>
+
+                    <label class="flex items-center space-x-3 p-4 rounded-2xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-amber-500/50 transition">
+                        <input type="checkbox" onchange="calculateEnergy()" class="habit-check w-5 h-5 accent-amber-500 rounded" value="20">
+                        <span class="text-slate-200">🧘 Tập 5 thức Suối Nguồn Tươi Trẻ (+20 Đ)</span>
+                    </label>
+
+                    <label class="flex items-center space-x-3 p-4 rounded-2xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-amber-500/50 transition">
+                        <input type="checkbox" onchange="calculateEnergy()" class="habit-check w-5 h-5 accent-amber-500 rounded" value="20">
+                        <span class="text-slate-200">🏃‍♂️ Chạy bộ từ 5km đến 10km (+20 Đ)</span>
+                    </label>
+
+                    <label class="flex items-center space-x-3 p-4 rounded-2xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-amber-500/50 transition">
+                        <input type="checkbox" onchange="calculateEnergy()" class="habit-check w-5 h-5 accent-amber-500 rounded" value="15">
+                        <span class="text-slate-200">📚 Đọc 30 phút sách tư duy (+15 Đ)</span>
+                    </label>
+
+                    <label class="flex items-center space-x-3 p-4 rounded-2xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-amber-500/50 transition">
+                        <input type="checkbox" onchange="calculateEnergy()" class="habit-check w-5 h-5 accent-amber-500 rounded" value="15">
+                        <span class="text-slate-200">📝 Viết 5 điều biết ơn & Kế hoạch (+15 Đ)</span>
+                    </label>
+
+                    <label class="flex items-center space-x-3 p-4 rounded-2xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-amber-500/50 transition">
+                        <input type="checkbox" onchange="calculateEnergy()" class="habit-check w-5 h-5 accent-amber-500 rounded" value="10">
+                        <span class="text-slate-200">💧 Uống đủ 2-3 lít nước mỗi ngày (+10 Đ)</span>
+                    </label>
+
+                </div>
+
+                <!-- Dynamic Progress Bar & Result -->
+                <div class="pt-6 border-t border-amber-500/20 space-y-4">
+                    <div class="flex justify-between items-center text-sm font-bold">
+                        <span class="text-slate-300 uppercase">Cấp Độ Năng Lượng Đạt Được:</span>
+                        <span id="scoreText" class="text-2xl font-black text-amber-400">0%</span>
+                    </div>
+
+                    <div class="w-full bg-slate-950 rounded-full h-5 p-1 border border-slate-800">
+                        <div id="energyProgress" class="bg-gradient-to-r from-amber-500 to-orange-500 h-full rounded-full transition-all duration-500 w-0"></div>
+                    </div>
+
+                    <!-- Dynamic Feedback Message -->
+                    <div id="energyFeedback" class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-center font-bold text-sm text-slate-300">
+                        👉 Hãy tích chọn các mục ở trên để đánh thức chỉ số năng lượng của bạn!
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 🔥 DAILY AFFIRMATIONS / INSPIRING MINDSET SECTION -->
+    <section id="tuyen-ngon" class="py-24 bg-slate-950/90 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-black uppercase tracking-widest border border-amber-500/20">
+                    Cài Đặt Tư Duy Đỉnh Cao
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white">
+                    TUYÊN NGÔN <span class="text-gradient-fire uppercase">CHIẾN BINH PHI THƯỜNG</span>
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Đọc to những câu tuyên ngôn này mỗi sáng để gieo mầm sức mạnh vào tiềm thức của bạn.
+                </p>
+            </div>
+
+            <!-- Affirmation Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition space-y-3 relative overflow-hidden group">
+                    <div class="text-amber-400 font-black text-xl">01</div>
+                    <p class="text-lg font-bold text-white leading-snug">
+                        "Tôi là nhà vô địch của cuộc đời tôi. Kỷ luật là sức mạnh, tự do đến từ sự rèn luyện!"
+                    </p>
+                    <button onclick="copyAffirmation(this)" class="text-xs text-amber-400 font-bold hover:underline flex items-center space-x-1 pt-2">
+                        <i class="fa-solid fa-copy"></i> <span>Sao chép câu này</span>
+                    </button>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition space-y-3 relative overflow-hidden group">
+                    <div class="text-amber-400 font-black text-xl">02</div>
+                    <p class="text-lg font-bold text-white leading-snug">
+                        "Mỗi ngày tôi tốt hơn 1%. Tiềm năng trong tôi là vô hạn và không rào cản nào cản được tôi!"
+                    </p>
+                    <button onclick="copyAffirmation(this)" class="text-xs text-amber-400 font-bold hover:underline flex items-center space-x-1 pt-2">
+                        <i class="fa-solid fa-copy"></i> <span>Sao chép câu này</span>
+                    </button>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition space-y-3 relative overflow-hidden group">
+                    <div class="text-amber-400 font-black text-xl">03</div>
+                    <p class="text-lg font-bold text-white leading-snug">
+                        "Thức giấc 4h30 sáng là chiến thắng đầu tiên. Tôi làm chủ bình minh, tôi làm chủ cuộc đời!"
+                    </p>
+                    <button onclick="copyAffirmation(this)" class="text-xs text-amber-400 font-bold hover:underline flex items-center space-x-1 pt-2">
+                        <i class="fa-solid fa-copy"></i> <span>Sao chép câu này</span>
+                    </button>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition space-y-3 relative overflow-hidden group">
+                    <div class="text-amber-400 font-black text-xl">04</div>
+                    <p class="text-lg font-bold text-white leading-snug">
+                        "Năng lượng tạo ra ngân lượng. Tôi sống với đam mê rực cháy và tràn đầy lòng biết ơn."
+                    </p>
+                    <button onclick="copyAffirmation(this)" class="text-xs text-amber-400 font-bold hover:underline flex items-center space-x-1 pt-2">
+                        <i class="fa-solid fa-copy"></i> <span>Sao chép câu này</span>
+                    </button>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition space-y-3 relative overflow-hidden group">
+                    <div class="text-amber-400 font-black text-xl">05</div>
+                    <p class="text-lg font-bold text-white leading-snug">
+                        "Tôi không sợ thất bại, tôi chỉ sợ sự trì hoãn. Hành động ngay lập tức là chìa khóa thành công!"
+                    </p>
+                    <button onclick="copyAffirmation(this)" class="text-xs text-amber-400 font-bold hover:underline flex items-center space-x-1 pt-2">
+                        <i class="fa-solid fa-copy"></i> <span>Sao chép câu này</span>
+                    </button>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition space-y-3 relative overflow-hidden group">
+                    <div class="text-amber-400 font-black text-xl">06</div>
+                    <p class="text-lg font-bold text-white leading-snug">
+                        "Thân thể tôi dẻo dai như suối nguồn tươi trẻ, trí tuệ tôi minh mẫn và sáng suốt."
+                    </p>
+                    <button onclick="copyAffirmation(this)" class="text-xs text-amber-400 font-bold hover:underline flex items-center space-x-1 pt-2">
+                        <i class="fa-solid fa-copy"></i> <span>Sao chép câu này</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 👤 ABOUT XUÂN HÒA SECTION -->
+    <section id="ve-xuan-hoa" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="glass-card p-8 sm:p-14 rounded-3xl grid lg:grid-cols-12 gap-12 items-center border border-slate-800">
+                
+                <div class="lg:col-span-5 relative">
+                    <div class="w-full h-[400px] rounded-2xl bg-gradient-to-tr from-amber-500 via-orange-500 to-indigo-900 p-1 shadow-2xl">
+                        <div class="w-full h-full bg-slate-950 rounded-xl flex flex-col items-center justify-center p-6 text-center space-y-4">
+                            <div class="w-28 h-28 rounded-full bg-gradient-to-tr from-amber-400 to-orange-500 flex items-center justify-center text-slate-950 font-black text-4xl shadow-xl">
+                                XH
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-black text-white">XUÂN HÒA</h3>
+                                <p class="text-xs text-amber-400 font-bold uppercase tracking-widest">Người Truyền Động Lực & Kỷ Luật</p>
+                            </div>
+                            <p class="text-slate-400 text-xs leading-relaxed italic">
+                                "Sứ mệnh của tôi là đồng hành cùng hàng ngàn anh em đánh thức con người phi thường đang ngủ quên bên trong!"
+                            </p>
+                            <a href="https://zalo.me/0978244969" target="_blank" class="px-6 py-2.5 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xs uppercase shadow-md">
+                                Kết Nối Trực Tiếp Zalo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-black uppercase tracking-widest border border-amber-500/20">
+                        Hành Trình Chuyển Hóa
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white">
+                        CÂU CHUYỆN & SỨ MỆNH CỦA <span class="text-gradient-gold">XUÂN HÒA</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Tôi tin rằng trong mỗi con người đều ẩn chứa một nguồn năng lượng khổng lồ. Tuy nhiên, lối sống thụ động, sự trì hoãn và nỗi sợ hãi đã vô tình dập tắt ngọn lửa ấy.
+                    </p>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Bằng việc duy trì kỷ luật **Dậy từ 4h30 sáng**, thực hành **Suối Nguồn Tươi Trẻ**, **Chạy Bộ Vượt Giới Hạn** và nghiên cứu chuyên sâu về **Tử Huyệt Cảm Xúc**, tôi đã chuyển hóa hoàn toàn bản thân và sẵn sàng chia sẻ toàn bộ bộ công cụ này đến bạn!
+                    </p>
+
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <div class="flex items-center space-x-3 bg-slate-900/90 px-4 py-3 rounded-xl border border-slate-800">
+                            <i class="fa-solid fa-phone text-amber-400 text-lg"></i>
+                            <div>
+                                <div class="text-[10px] text-slate-400 uppercase font-bold">Hotline / Zalo</div>
+                                <div class="text-sm font-black text-white">0978.244.969</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-3 bg-slate-900/90 px-4 py-3 rounded-xl border border-slate-800">
+                            <i class="fa-solid fa-fire text-amber-500 text-lg"></i>
+                            <div>
+                                <div class="text-[10px] text-slate-400 uppercase font-bold">Tinh Thần</div>
+                                <div class="text-sm font-black text-white">Chiến Binh Không Bỏ Cuộc</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 📢 COMMUNITY CALL TO ACTION -->
+    <section class="py-20 relative bg-gradient-to-r from-amber-600 via-orange-600 to-amber-600 text-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight">
+                BẠN ĐÃ SẴN SÀNG ĐÁNH THỨC CON NGƯỜI PHI THƯỜNG?
+            </h2>
+            <p class="text-slate-950 font-bold text-base sm:text-lg max-w-2xl mx-auto">
+                Đừng hoãn lại tương lai rực rỡ của bạn thêm một giây nào nữa. Hãy tham gia cùng Xuân Hòa ngay hôm nay!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="https://zalo.me/0978244969" target="_blank" class="px-8 py-4 rounded-2xl bg-slate-950 text-white font-black text-base uppercase tracking-wider shadow-2xl hover:scale-105 transition transform flex items-center space-x-3">
+                    <i class="fa-solid fa-comments text-amber-400 text-xl"></i>
+                    <span>Vào Nhóm Zalo Rèn Luyện (0978.244.969)</span>
+                </a>
+                <a href="tel:0978244969" class="px-8 py-4 rounded-2xl bg-white text-slate-950 font-black text-base uppercase tracking-wider shadow-xl hover:bg-slate-100 transition flex items-center space-x-3">
+                    <i class="fa-solid fa-phone text-orange-600 text-xl"></i>
+                    <span>Gọi Điện Ngay</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📍 FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <h3 class="text-xl font-black text-white uppercase">XUÂN HÒA - PHÁT TRIỂN BẢN THÂN</h3>
+            <p class="text-xs text-slate-400">Đánh Thức Con Người Phi Thường Trong Bạn • Hotline/Zalo: <a href="tel:0978244969" class="text-amber-400 font-bold">0978.244.969</a></p>
+            <p class="text-[11px] text-slate-600 pt-4 border-t border-slate-900">
+                © 2026 XUÂN HÒA. Bản quyền thuộc về thương hiệu Phát Triển Bản Thân Xuân Hòa.
+            </p>
+        </div>
+    </footer>
+
+    <!-- 📞 FLOATING CONTACT WIDGET (ZALO & PHONE PULSE) -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <!-- Zalo Button -->
+        <a href="https://zalo.me/0978244969" target="_blank" title="Chat Zalo 0978244969" class="w-14 h-14 bg-blue-600 hover:bg-blue-500 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-comments text-2xl"></i>
+        </a>
+        <!-- Phone Call Button (Pulse Effect) -->
+        <a href="tel:0978244969" title="Gọi Điện 0978244969" class="w-14 h-14 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 rounded-full flex items-center justify-center shadow-2xl pulse-shake">
+            <i class="fa-solid fa-phone text-2xl font-bold"></i>
+        </a>
+    </div>
+
+    <!-- 🔔 TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-slate-900 text-amber-400 border border-amber-500/40 px-6 py-3 rounded-full shadow-2xl text-xs font-bold flex items-center space-x-2 transition-all duration-300 opacity-0 pointer-events-none z-50">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+        <span id="toastMsg">Đã sao chép tuyên ngôn!</span>
+    </div>
+
+    <!-- ============================================================================== -->
+    <!-- ⚙️ JAVASCRIPT INTERACTIVE LOGIC -->
+    <!-- ============================================================================== -->
+    <script>
+        // Toggle Mobile Menu Drawer
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Energy Calculator Logic
+        function calculateEnergy() {
+            const checkboxes = document.querySelectorAll('.habit-check');
+            let totalScore = 0;
+            
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    totalScore += parseInt(cb.value);
+                }
+            });
+
+            // Update Progress Bar & Score Display
+            const scoreText = document.getElementById('scoreText');
+            const progress = document.getElementById('energyProgress');
+            const feedback = document.getElementById('energyFeedback');
+
+            scoreText.textContent = totalScore + "%";
+            progress.style.width = totalScore + "%";
+
+            // Feedback rules
+            if (totalScore === 0) {
+                feedback.innerHTML = "👉 Hãy tích chọn các mục ở trên để đánh thức chỉ số năng lượng của bạn!";
+                feedback.className = "p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-center font-bold text-sm text-slate-300";
+            } else if (totalScore < 40) {
+                feedback.innerHTML = "🔥 <strong>BẮT ĐẦU KHỞI ĐỘNG!</strong> Bạn đang tích tụ những hạt mầm kỷ luật đầu tiên. Cố gắng thêm nào!";
+                feedback.className = "p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-center font-bold text-sm text-amber-400";
+            } else if (totalScore < 80) {
+                feedback.innerHTML = "⚡ <strong>CHIẾN BINH KỶ LUẬT!</strong> Năng lượng rực cháy. Bạn đã vượt xa 80% mọi người!";
+                feedback.className = "p-4 rounded-xl bg-orange-500/20 border border-orange-500/40 text-center font-bold text-sm text-orange-300";
+            } else {
+                feedback.innerHTML = "🏆 <strong>CON NGƯỜI PHI THƯỜNG!</strong> Tuyệt vời! Bạn sở hữu nguồn năng lượng đỉnh cao và ý chí thép vĩnh cửu!";
+                feedback.className = "p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-center font-bold text-sm text-emerald-400";
+            }
+        }
+
+        // Copy Affirmation Logic
+        function copyAffirmation(btn) {
+            const textToCopy = btn.previousElementSibling.innerText;
+            
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    showToast("Đã sao chép câu tuyên ngôn vào bộ nhớ tạm!");
+                });
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showToast("Đã sao chép câu tuyên ngôn!");
+            }
+        }
+
+        // Toast Notification Trigger
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = msg;
+
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
